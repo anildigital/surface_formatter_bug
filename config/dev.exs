@@ -52,9 +52,14 @@ config :surface_formatter_bug, SurfaceFormatterBugWeb.Endpoint,
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/surface_formatter_bug_web/(live|views)/.*(ex)$",
-      ~r"lib/surface_formatter_bug_web/templates/.*(eex)$"
+      ~r"lib/surface_formatter_bug_web/templates/.*(eex)$",
+      ~r"lib/surface_formatter_bug_web/live/.*(sface)$"
     ]
   ]
+
+config :surface, :components, [
+  {Surface.Components.Form.ErrorTag, default_translator: {SurfaceFormatterBugWeb.ErrorHelpers, :translate_error}}
+]
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
