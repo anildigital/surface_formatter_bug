@@ -58,7 +58,8 @@ config :surface_formatter_bug, SurfaceFormatterBugWeb.Endpoint,
   ]
 
 config :surface, :components, [
-  {Surface.Components.Form.ErrorTag, default_translator: {SurfaceFormatterBugWeb.ErrorHelpers, :translate_error}}
+  {Surface.Components.Form.ErrorTag,
+   default_translator: {SurfaceFormatterBugWeb.ErrorHelpers, :translate_error}}
 ]
 
 # Do not include metadata nor timestamps in development logs
