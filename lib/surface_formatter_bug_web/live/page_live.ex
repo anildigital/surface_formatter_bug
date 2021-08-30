@@ -1,6 +1,6 @@
 defmodule SurfaceFormatterBugWeb.PageLive do
-  # use SurfaceFormatterBugWeb, :live_view
   use Surface.LiveView
+  alias SurfaceFormatterBugWeb.TextInputNew
 
   @impl true
   def mount(_params, _session, socket) do
@@ -10,7 +10,7 @@ defmodule SurfaceFormatterBugWeb.PageLive do
   @impl true
   def render(assigns) do
     ~F"""
-    <h1> Hello World </h1>
+    <TextInputNew />
     """
   end
 end
